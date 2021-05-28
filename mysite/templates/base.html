@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="{%static 'css/base.css'%}">
     </head>
-
+    
     <body>
         <div id='topbar'><h1>eric thomas anderson</h1>
             <ul>
@@ -24,18 +24,19 @@
                 To showcase software developement skills in an interactive and expressive format.
             </p>
           </div>
- 
+
+        <div id='block_content'>
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
-
-{% block sidebar %}      
-<!-- Sidebar Widgets Column -->
-{% endblock sidebar %}
+        </div>
 
         <!-- Footer -->
-        <footer class="py-3 bg-grey">
-            <p class="m-0 text-dark text-center ">Copyright &copy; Eric Anderson</p>
+        <footer>
+            <p ">Copyright &copy; Eric Anderson</p>
         </footer>
     </body>
+    {% block sidebar %}
+    {% include 'sidebar.html' %}
+    {% endblock sidebar %}
 </html>

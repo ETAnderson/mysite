@@ -1,9 +1,8 @@
 {% block sidebar %}
 
-<!-- Sidebar Widgets Column -->
 <div id="sidebar">
-    <h3><a href='index.html'>Home</a></h3>
-    <h3>Projects</h3>
+    <h3><a href="{% url 'home' %}">Home</a></h3>
+    <button class='dropdown_btn'>Projects</button>
       <div id='project_links'>
           <li><a href=''>CRUD API in Flask with PostgreSQL</a></li>
           <li><a href=''>A simple poll application using Django and PostgreSQL</a></li>
