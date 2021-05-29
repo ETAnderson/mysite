@@ -4,27 +4,23 @@
 
 <header class="masthead">
  
-  <h3 >Blogs</h3>
+  <h1>Blogs</h1>
   <p >If you like listening to me talk, look at me write! &nbsp</p>
        
 </header>
 
 <div class="blog_entries">
     <!-- Blog Entries Column -->
-      {% for post in post_list %}
-        <div class="card-body">
-          <h2 class="card-title">{{ post.title }}</h2>
-          <p>{{ post.author }} | {{ post.created_on}}  </p>
-          <p>{{post.content|safe|slice:":200" }}</p>
-          <a href="{% url 'post_detail' post.slug  %}" class="read_more_btn">Read More &rarr;</a>
-        </div>
+    {% for post in post_list %}
+      <div class="card-body">
+        <h2 class="card-title">{{ post.title }}</h2>
+        <p>{{ post.author }} | {{ post.created_on}}  </p>
+        <p>{{post.content|safe|slice:":200" }}</p>
+        <a href="{% url 'post_detail' post.slug  %}" class="read_more_btn">Read More &rarr;</a>
+      </div>
 
-      {% endfor %}
+    {% endfor %}
 
 
-</div>
 
-</ul>
-</nav>
-</div>
 {%endblock%}

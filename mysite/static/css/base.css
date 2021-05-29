@@ -1,6 +1,8 @@
 /* GENERAL */
 
 body {
+    margin-top: 100px;
+    margin-left: 160px;
     background-color: rgb(223, 194, 157);
 }
 
@@ -30,8 +32,13 @@ h3 a {
     color: darkorange;
 } 
 
-.masthead {
-   margin-left: 20px;
+#main {
+    margin-left: 20px;
+    text-align: center;
+}
+
+#block_content {
+    margin-left: 20px;
 }
 
 /* TOPBAR */
