@@ -13,7 +13,7 @@
     <!-- Blog Entries Column -->
     {% for post in post_list %}
       <div class="card-body">
-        <h2 class="card-title">{{ post.title }}</h2>
+        <h2 class="card-title">&#8594 {{ post.title }}</h2>
         <p>{{ post.author }} | {{ post.created_on}}  </p>
         <p>{{post.content|safe|slice:":200" }}</p>
         <a href="{% url 'post_detail' post.slug  %}" class="read_more_btn">Read More &rarr;</a>
