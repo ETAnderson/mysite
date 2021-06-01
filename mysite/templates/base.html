@@ -7,6 +7,7 @@
         <title>Eric's Interactive Portfolio</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
         <meta name="google" content="notranslate" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="{%static 'css/base.css'%}">
     </head>
@@ -15,7 +16,7 @@
         <div id='topbar'>
             <a href="{% url 'home' %}">Eric's Interactive Portfolio</a>
             <div id='dropdown'>
-                <button class='dropbtn' onclick="projectDropDown()">Projects<i class="fa fa-caret-down"></i></button>
+                <button class='dropbtn' onclick="projectDropDown()">Projects  <i class="fa fa-caret-down"></i></button>
                 <div class='dropdown_container' id='myDropdown'>
                     <a href=''>CRUD API in Flask with PostgreSQL</a>
                     <a href=''>A simple poll application using Django and PostgreSQL</a>

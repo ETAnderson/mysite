@@ -52,7 +52,7 @@ h3 a {
     font-size: 24px;
     color: #adadad;
     background-color: rgb(0, 0, 0);
-    overflow: hidden;
+    overflow: visible;
 }
 
 #topbar a {
@@ -92,7 +92,7 @@ button:hover {
   
   .dropdown .dropbtn {
     cursor: pointer;
-    font-size: 16px;  
+    font-size: 16px; 
     border: none;
     outline: none;
     color: white;
@@ -104,7 +104,8 @@ button:hover {
 
 .dropdown_container {
     display: none;
-    position: absolute;
+    position: fixed;
+    vertical-align: middle;
     color: #adadad;
     background-color: rgb(0, 0, 0);
     min-width: 160px;
@@ -113,8 +114,8 @@ button:hover {
 }
 
 .dropdown_container a {
-    float: none;
-    color: black;
+    float: left;
+    color: rgb(0, 0, 0);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
