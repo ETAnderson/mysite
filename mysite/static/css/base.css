@@ -105,10 +105,9 @@ button:hover {
 .dropdown_container {
     display: none;
     position: fixed;
-    vertical-align: middle;
+    text-align: center;
     color: #adadad;
     background-color: rgb(0, 0, 0);
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -122,6 +121,10 @@ button:hover {
     text-align: left;
   }
 
+.dropdown_container li {
+    list-style: none;
+}
+  
   .show {
     display: block;
   }
