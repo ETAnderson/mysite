@@ -13,22 +13,9 @@
     </head>
     
     <body>
-        <div id='topbar'>
-            <a href="{% url 'home' %}">Eric's Interactive Portfolio</a>
-            <div id='dropdown'>
-                <button class='dropbtn' onclick="projectDropDown()">Projects  <i class="fa fa-caret-down"></i></button>
-                <div class='dropdown_container' id='myDropdown'>
-                  <ul>
-                    <li><a href="/blogs/"">Blogs</a></li>
-                    <li><a href='/polls/'>Polls</a></li>
-                    <li><a href=''>Future Project Placeholder</a></li>
-                  </ul> 
-                </div>
-            </div>
-            <a href='mailto:anderson.eric.t@gmail.com'> Contact via email</a>
-            <a href="https://github.com/ETAnderson">Eric on Github</a>
-        </div>
-
+      {% block topbar %}
+      <!-- Topbar Goes here-->
+      {% endblock topbar %}
         <div id='main'>
           <h1>Mission Statement</h1>
             <p id='mission_statement'>
@@ -46,21 +33,5 @@
         <footer>
             <p ">Copyright &copy; Eric Anderson</p>
         </footer>
-    
-        <script>
-            function projectDropDown() {
-                
-              document.getElementById("myDropdown").classList.toggle("show");
-            }
-            
-            window.onclick = function(e) {
-              if (!e.target.matches('.dropbtn')) {
-              var myDropdown = document.getElementById("myDropdown");
-                if (myDropdown.classList.contains('show')) {
-                  myDropdown.classList.remove('show');
-                }
-              }
-            }
-        </script>
     </body>
 </html>
