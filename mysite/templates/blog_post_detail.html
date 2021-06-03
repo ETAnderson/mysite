@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %} 
 
 {% block topbar %}
 
@@ -38,27 +38,42 @@
 
 {% block content %}
 
-<header class="masthead">
- 
-  <h2>Blogs</h2>
-  <p >If you like listening to me talk, look at me write! &nbsp</p>
-       
-</header>
+<div class="comments">
+  <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
+  <p>{{ post.author }} | {{ post.created_on }}</p>
+  <p>{{ post.content | safe }}</p>
 
-<div class="blog_entries">
-    <!-- Blog Entries Column -->
-    {% for post in post_list %}
-      <div class="card-body">
-        <div class='card-title-line'>
-        <span id='card-title'>&#8594 {{ post.title }}</span>
-        <a href="{% url 'blog_post_detail' post.slug  %}" class="read_more_btn">Read More &rarr;</a>
-        </div>
-        <p>{{ post.author }} | {{ post.created_on}}  </p>
-        <p>{{post.content|safe|slice:":200" }}</p>
+  <div class="comment_block">
+      <!-- comments -->
+      <h2>{{ comments.count }} comments</h2>
+
+      {% for comment in comments %}
+      <div class="comments">
+        <p>
+          {{ comment.name }}
+          <span>
+            {{ comment.created_on }}
+          </span>
+        </p>
+        {{ comment.body | linebreaks }}
       </div>
 
-    {% endfor %}
+      {% endfor %}
+  </div>
 
-
-
-{%endblock%}
+    <div class="card-body">
+      {% if new_comment %}
+      <div class="alert alert-success" role="alert">
+        Your comment is awaiting moderation
+      </div>
+      {% else %}
+      <h3>Leave a comment</h3>
+      <form method="post">
+        {{ comment_form.as_p }}
+        {% csrf_token %}
+        <button class='submit_btn' type="submit">Submit</button>
+      </form>
+      {% endif %}
+    </div>
+</div>
+{% endblock content %}

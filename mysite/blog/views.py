@@ -9,7 +9,7 @@ class PostList(generic.ListView):
     template_name = 'index.html'
 
 def post_detail(request, slug):
-    template_name = 'post_detail.html'
+    template_name = 'blog_post_detail.html'
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.filter(active=True).order_by("-created_on")
     new_comment = None
@@ -27,6 +27,6 @@ def post_detail(request, slug):
         comment_form = CommentForm()
 
     return render(request, template_name, {'post': post,
-                                            'comments': comments,
-                                            'new_comment': new_comment,
-                                            'comment_form': comment_form})
+                                           'comments': comments,
+                                           'new_comment': new_comment,
+                                           'comment_form': comment_form})

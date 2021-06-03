@@ -13,25 +13,24 @@
     </head>
     
     <body>
+      <div id='main'>
       {% block topbar %}
       <!-- Topbar Goes here-->
       {% endblock topbar %}
-        <div id='main'>
-          <h1>Mission Statement</h1>
-            <p id='mission_statement'>
-                To showcase software developement skills in an interactive and expressive format.
-            </p>
-        </div>
+      
+        <h1 id='mission_statement'>Mission Statement</h1>
+          <p>
+              To showcase software developement skills in an interactive and expressive format.
+          </p>
+      </div>
 
-        <div id='block_content'>
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
-        </div>
+      {% block content %}
+      <!-- Content Goes here -->
+      {% endblock content %}
 
-        <!-- Footer -->
-        <footer>
-            <p ">Copyright &copy; Eric Anderson</p>
-        </footer>
+      <!-- Footer -->
+      <footer>
+          <p ">Copyright &copy; Eric Anderson</p>
+      </footer>
     </body>
 </html>
