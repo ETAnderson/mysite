@@ -1,3 +1,9 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% include "topbar.html" %}
 
 {% if latest_question_list %}
     <ul>
@@ -8,3 +14,5 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+
+{% endblock content %}
