@@ -1,40 +1,5 @@
 {% extends 'base.html' %} 
 
-{% block topbar %}
-
-<div id='topbar'>
-  <a href="{% url 'home' %}">Eric's Interactive Portfolio</a>
-  <div id='dropdown'>
-      <button class='dropbtn' onclick="projectDropDown()">Projects  <i class="fa fa-caret-down"></i></button>
-      <div class='dropdown_container' id='myDropdown'>
-        <ul>
-          <li><a href="/blogs/"">Blogs</a></li>
-          <li><a href='/polls/'>Polls</a></li>
-          <li><a href=''>Future Project Placeholder</a></li>
-        </ul> 
-      </div>
-  </div>
-  <a href='mailto:anderson.eric.t@gmail.com'> Contact via email</a>
-  <a href="https://github.com/ETAnderson">Eric on Github</a>
-</div>
-
-<script>
-  function projectDropDown() {
-      
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  window.onclick = function(e) {
-    if (!e.target.matches('.dropbtn')) {
-    var myDropdown = document.getElementById("myDropdown");
-      if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
-      }
-    }
-  }
-</script>
-
-{% endblock topbar %}
 
 {% block content %}
 
@@ -71,7 +36,7 @@
       <form method="post">
         {{ comment_form.as_p }}
         {% csrf_token %}
-        <button class='submit_btn' type="submit">Submit</button>
+        <button class='site-button' type="submit">Submit</button>
       </form>
       {% endif %}
     </div>

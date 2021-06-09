@@ -1,4 +1,3 @@
-/* GENERAL */
 
 body {
     margin: 0;
@@ -15,6 +14,7 @@ h3 a {
 }
 
 footer {
+    margin: 0;
     text-align: center;
 }
 
@@ -25,39 +25,37 @@ footer {
 .masthead {
     text-align: center;
 }
-.read_more_btn {
+.site-button {
     color: rgb(255, 255, 255);
     background-color: rgb(32, 23, 68);
     text-decoration: none;
     border: 3px outset rgb(255, 255, 255);
     border-radius: 50px;
+    margin: 20px;
     padding: 10px;
 }
 
-.read_more_btn:hover {
+.site-button:hover {
     color: darkorange;
 } 
-
-.submit_btn {
-    color: rgb(255, 255, 255);
-    background-color: rgb(32, 23, 68);
-    text-decoration: none;
-    border: 3px outset rgb(255, 255, 255);
-    border-radius: 50px;
-    padding: 10px;
-}
-
-.submit_btn:hover {
-    color: darkorange;
-}
 
 #main {
     margin-top: 60px;
     text-align: center;
 }
 
+#mission_statement {
+    color:rgb(32, 23, 68); 
+}
+
+/* BLOG */
+
 .blog_entries {
     text-align: center;
+}
+
+.blog_entries p {
+    margin: 20px;
 }
 
 #card-title {
@@ -69,8 +67,34 @@ footer {
     margin-left: 100px;
 }
 
-#mission_statement {
-    color:rgb(32, 23, 68);    
+/* POLLS */
+
+#polls {
+    text-align: center;
+    font-size: larger;
+    text-decoration: none;
+    list-style: none;
+}
+
+#polls li {
+    list-style: none;
+}
+
+#detail-form {
+    justify-content: left;
+}
+
+#poll-details {
+    text-align: center;
+}
+
+#poll-details h1 {
+    text-align: center;
+    color:rgb(32, 23, 68);
+}
+
+#poll-submit {
+    font-size: x-large;
 }
 
 /* TOPBAR */
