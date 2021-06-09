@@ -79,6 +79,7 @@ footer {
     align-items: center;
     position: absolute; top:0%;
     display:flex;
+    min-width: 1000px;
     justify-content: space-between;
     width: 100%;
     font-family: 'KoHo', sans-serif;
