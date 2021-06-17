@@ -12,18 +12,19 @@
         <link rel="stylesheet" href="{%static 'css/base.css'%}">
     </head>
     <body>
+    {% block topbar %}
+    {% include 'topbar.html' %}
+    {% endblock topbar %}
+    
+    {% block content %}
     <div id='main'>
-        {% block topbar %}
-        {% include 'topbar.html' %}
-        {% endblock topbar %}
+
         
         <h1 id='mission_statement'>Mission Statement</h1>
             <p>
                 To showcase software developement skills in an interactive and expressive format.
             </p>
     </div>
-    {% block content %}
-    <!-- Content Goes here -->
     {% endblock content %}
     <footer>
         <p ">Copyright &copy; Eric Anderson</p>
