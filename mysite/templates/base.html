@@ -1,36 +1,24 @@
-{% load static %}
+{% extends 'home.html' %} 
 
-<!DOCTYPE html>
-<html>
-
-    <head>
-        <title>Eric's Interactive Portfolio</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-        <meta name="google" content="notranslate" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="{%static 'css/base.css'%}">
-    </head>
-    
-    <body>
-      <div id='main'>
-      {% block topbar %}
-      {% include 'topbar.html' %}
-      {% endblock topbar %}
+    {% block content %}
+    <header class="masthead">
+ 
+        <h2>Blogs</h2>
+        <p >If you like listening to me talk, look at me write! &nbsp</p>
+             
+      </header>
       
-        <h1 id='mission_statement'>Mission Statement</h1>
-          <p>
-              To showcase software developement skills in an interactive and expressive format.
-          </p>
-      </div>
-
-      {% block content %}
-      <!-- Content Goes here -->
-      {% endblock content %}
-
-      <!-- Footer -->
-      <footer>
-          <p ">Copyright &copy; Eric Anderson</p>
-      </footer>
-    </body>
-</html>
+      <div class="blog_entries">
+          <!-- Blog Entries Column -->
+          {% for post in post_list %}
+            <div class="card-body">
+              <div class='card-title-line'>
+                <span id='card-title'>&#8594 {{ post.title }}</span>
+              </div>
+              <p>{{ post.author }} | {{ post.created_on}}  </p>
+              <p>{{post.content|safe|slice:":200" }}</p>
+              <a href="{% url 'blog_post_detail' post.slug  %}" class="site-button" >Read More &rarr;</a>
+            </div>
+      
+          {% endfor %}
+    {% endblock content %}

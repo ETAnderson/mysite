@@ -20,6 +20,6 @@ from home.views import HomePageView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomePageView.as_view(), name='home'),
-    path('blogs/', include('blog.urls')),
-    path('polls/', include('polls.urls')),
+    path('blogs/', include(('blog.urls'), namespace='base')),
+    path('polls/', include(('polls.urls'), namespace='index')),
 ]
