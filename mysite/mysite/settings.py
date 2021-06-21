@@ -101,6 +101,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #         'PORT': '5432',
 #     }
 # }
+
+# Comment out this DATABASES for heroku, reverse for local dev
+
 DATABASES = {
     'default': {
 
@@ -162,7 +165,7 @@ ROOT_URLCONF = 'mysite.urls'
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
-# Uncomment for heroku
+# Uncomment the below for heroku, comment out for local dev
 
 # db_from_env = dj_database_url.config()
 # DATABASES['default'].update(db_from_env)
