@@ -173,6 +173,8 @@ button:hover {
     background-color: rgb(0, 0, 0);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-bottom-right-radius:25px;
+    border-bottom-left-radius: 25px;
 }
 
 .dropdown_container a {
