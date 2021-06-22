@@ -7,8 +7,11 @@ body {
     background-color: rgb(223, 194, 157);
 
 }
-#body-content {
+#block-content {
+    display: flex;
+    flex-flow: column;
     margin-top: 60px;
+    text-align: center;
 }
 
 h2 {
@@ -30,7 +33,7 @@ footer {
 }
 
 .masthead {
-    text-align: center;
+    margin:auto;
 }
 .site-button {
     color: rgb(255, 255, 255);
@@ -74,6 +77,16 @@ footer {
 }
 
 /* POLLS */
+
+#block-content a {
+    text-decoration: none;
+}
+
+#block-content ul {
+    margin: auto;
+    display: inline-block; 
+	text-align: left;
+}
 
 #polls {
     text-align: center;
