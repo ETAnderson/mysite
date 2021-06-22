@@ -40,7 +40,10 @@ footer {
     background-color: rgb(32, 23, 68);
     text-decoration: none;
     padding: 10px;
+    margin: 10px;
     border-radius: 10px;
+    box-sizing: none;
+    border: none;
 }
 
 .site-button:hover {
