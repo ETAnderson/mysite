@@ -29,7 +29,10 @@
     </div>
     
     <footer>
-        <p ">Copyright &copy; Eric Anderson</p>
+        <p>Copyright &copy; Eric Anderson</p>
+        {% block bottombar %}
+        {% include 'bottombar.html' %}
+        {% endblock bottombar %}
     </footer>
     </body>
 </html>
