@@ -39,10 +39,8 @@ footer {
     color: rgb(255, 255, 255);
     background-color: rgb(32, 23, 68);
     text-decoration: none;
-    border: 3px outset rgb(255, 255, 255);
-    border-radius: 50px;
-    margin: 20px;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .site-button:hover {
