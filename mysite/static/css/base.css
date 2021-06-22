@@ -103,6 +103,15 @@ footer {
     font-size: x-large;
 }
 
+/* COMMENT BLOCK */
+
+.card-body #id_name, #id_email, #id_body {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
 /* TOPBAR */
 
 #topbar {
