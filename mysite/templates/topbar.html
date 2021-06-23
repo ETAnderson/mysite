@@ -2,17 +2,16 @@
 {% block topbar %}
 
 <div id='topbar' class ='navbar'>
-    <a href="{% url 'home' %}">Eric's Interactive Portfolio</a>
-    <a href='mailto:anderson.eric.t@gmail.com'><img src="{% static '/img/email.png' %}"></a>
-    <a href="https://github.com/ETAnderson"><img src="{% static '/img/GitHub-Mark-64px.png' %}"</a>
+    <a href="{% url 'home' %}" id="home-link">ERIC'S INTERACTIVE PORTFOLIO</a>
     <div id='dropdown'>
         <input type="image" src="{% static 'img/projects.png' %}" class='dropbtn' onclick="projectDropDown()">
         <div class='dropdown_container' id='myDropdown'>
-          <ul>
-            <li><a href="{% url 'blog:base' %}">Blogs</a></li>
-            <li><a href="{% url 'polls:index' %}">Polls</a></li>
-          </ul> 
-        </div>
+        <a href="{% url 'blog:base' %}">Blogs</a>
+        <a href="{% url 'polls:index' %}">Polls</a>
+    </div>
+    <a href="https://github.com/ETAnderson"><img src="{% static 'img/GitHub-Mark-64px.png' %}"></a>
+    <a href="https://www.linkedin.com/in/eric-anderson-10862b20b/"><img src="{% static 'img/linkedin.png' %}"></a>
+    <a href='mailto:anderson.eric.t@gmail.com'><img src="{% static '/img/email.png' %}"></a>
     </div>
   </div>
   
