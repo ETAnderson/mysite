@@ -2,7 +2,7 @@
     font-family: 'KoHo', sans-serif;
 }
 
-@media screen and (max-width:480px) {
+@media all and (max-width:480px) {
     #block-content {
         margin-top: 300px;
     }
