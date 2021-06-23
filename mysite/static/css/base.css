@@ -2,6 +2,12 @@
     font-family: 'KoHo', sans-serif;
 }
 
+@media only screen and (max-width: 600px) {
+    #block-content {
+        margin-top: 200px;
+    }
+}
+
 body {
     margin: 0;
     background-color: rgb(250, 250, 250);
