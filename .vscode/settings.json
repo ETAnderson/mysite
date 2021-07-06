@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "/home/eric/.local/share/virtualenvs/mysite-TnjeApBg/bin/python"
+    "python.pythonPath": "/home/eric/.local/share/virtualenvs/mysite-TnjeApBg/bin/python",
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
 }
