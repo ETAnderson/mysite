@@ -21,16 +21,33 @@
 
     <div id="block-content">
         {% block content %}
+        <div id='bio'>
+            <h1>Introduction</h1>
+            <img id="portrait" src="{% static 'img/portrait.png' %}">
+            <p>
+                Hello, my name is Eric and welcome to my interactive portfolio! My wife, Rochelle, and I currently reside in West Michigan. I personally enjoy reading a variety of genres, non-fiction for continued learning and fiction purely for entertainment, as well as gaming, cooking, and just spending time together with the love of my life.
+            </p>
+        </div>
         <div id='main'>
             <h1 id='mission_statement'>Mission Statement</h1>
                 <p>
                     As a developer from a skilled trades background, I became used to eyes glazing over when asked about my career and decided there was a solution for this: rather then explaining components of software developement to people who wouldn't use the knowledge in any other aspect of their life, I would make my portfolio site a way for people to experience the knowledge and skills that I have gained in a way that those who aren't programatically adept will be able to engage with.
                 </p>
         </div>
-        <div id='bio'>
-            <p>
-                Hello, my name is Eric and welcome to my interactive portfolio! My wife, Rochelle, and I currently reside in West Michigan. I personally enjoy reading a variety of genres, non-fiction for continued learning and fiction purely for entertainment, as well as gaming, cooking, and just spending time together with the love of my life.
-            </p>
+        <div id='skills'>
+            <h1>Skills</h1>
+            <ul id='skills-list'>
+                <li><img alt="Python" src="{% static 'img/python.png' %}"><img src="{% static 'img/three.png' %}"></li>
+                <li><img alt="Javascript" src="{% static 'img/javascript.png' %}"><img src="{% static 'img/two.png' %}"></li>
+                <li><img alt="HTML/CSS" src="{% static 'img/html.png' %}"><img src="{% static 'img/css.png' %}"><img src="{% static 'img/three.png' %}"></li>
+                <li><img alt="Django" src="{% static 'img/django.png' %}"><img src="{% static 'img/four.png' %}"></li>
+                <li><img alt="Flask" src="{% static 'img/flask.png' %}"><img src="{% static 'img/three.png' %}"></li>
+                <li><img alt="React" src="{% static 'img/react.png' %}"><img src="{% static 'img/one.png' %}"></li>
+                <li><img alt="PostGreSQL" src="{% static 'img/postgresql.png' %}"><img src="{% static 'img/four.png' %}"></li>
+                <li><img alt="Git" src="{% static 'img/git.png' %}"><img src="{% static 'img/four.png' %}"></li>
+                <li><img alt="Virtual Studio Code" src="{% static 'img/vsc.png' %}"><img src="{% static 'img/three.png' %}"></li>
+                <li><img alt="Linux/Ubuntu" src="{% static 'img/ubuntu.png' %}"><img src="{% static 'img/four.png' %}"></li>
+            </ul>
         </div>
         {% endblock content %}
     </div>

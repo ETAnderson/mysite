@@ -11,11 +11,17 @@ body {
     display: flex;
     flex-flow: column;
     margin-top: 120px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
+h1 {
+    color:rgb(32, 23, 68);
+}
 h2 {
-    color: rgb(32, 23, 68);;
+    color: rgb(32, 23, 68);
 }
 
 h3 a {
@@ -54,8 +60,10 @@ footer {
     text-align: center;
 }
 
-#mission_statement {
-    color:rgb(32, 23, 68); 
+/* SKILLS */
+
+#skills-list {
+    list-style: none;
 }
 
 /* BLOG */
@@ -186,6 +194,15 @@ footer {
     list-style: none;
 }
   
-  .show {
+.show {
     display: inline-block;
-  }
+}
+
+/* IMAGES */
+
+#portrait {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25%;
+}
