@@ -2,7 +2,7 @@
 
 
 {% block content %}
-
+<header class='masthead'>
 <div class="comments">
   <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
   <p>{{ post.author }} | {{ post.created_on }}</p>
@@ -36,9 +36,10 @@
       <form method="post">
         {{ comment_form.as_p }}
         {% csrf_token %}
-        <button class='site-button' type="submit">Submit</button>
+        <button class='btn btn-primary btn-xl' type="submit">Submit</button>
       </form>
       {% endif %}
     </div>
 </div>
+</header>
 {% endblock content %}

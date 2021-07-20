@@ -1,23 +1,22 @@
 {% extends 'home.html' %} 
 
-    {% block content %}
-    <header class="masthead">
- 
-        <h2>Blogs</h2>
-        <p >If you like listening to me talk, look at me write! &nbsp</p>
-             
-      </header>
-      
-      <div class="blog_entries">
-          <!-- Blog Entries Column -->
-          {% for post in post_list %}
-            <div class="card-body">
-              <div class='card-title-line'>
-                <span id='card-title'>&#8594 {{ post.title }}</span>
-              </div>
-              <p>{{ post.author }} | {{ post.created_on}}  </p>
-              <p>{{post.content|safe|slice:":200" }}</p>
-              <a href="{% url 'blog:blog_post_detail' post.slug  %}" class="site-button" >Read More</a>
-            </div>
-          {% endfor %}
-    {% endblock content %}
+{% block content %}
+<header class="masthead">
+
+    <h2>Blogs</h2>
+    <p >If you like listening to me talk, look at me write! &nbsp</p>
+
+  <div class="blog_entries">
+  <!-- Blog Entries Column -->
+  {% for post in post_list %}
+    <div class="card-body">
+      <div class='card-title-line'>
+        <span id='card-title'>&#8594 {{ post.title }}</span>
+      </div>
+      <p>{{ post.author }} | {{ post.created_on}}  </p>
+      <p>{{post.content|safe|slice:":200" }}</p>
+      <a href="{% url 'blog:blog_post_detail' post.slug  %}" class="site-button" >Read More</a>
+  </div>
+</header>
+      {% endfor %}
+{% endblock content %}

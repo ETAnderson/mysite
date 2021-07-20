@@ -4,19 +4,19 @@
 
 <header class="masthead">
  
-  <h2>Polls</h2>
-  <p >Boy do i have quesions! &nbsp</p>
-       
-</header>
+    <h2>Polls</h2>
+    <p >Boy do i have quesions! &nbsp</p>
 
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+    {% if latest_question_list %}
+        <ul>
+        {% for question in latest_question_list %}
+            <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+
+</header>
 
 {%endblock%}
