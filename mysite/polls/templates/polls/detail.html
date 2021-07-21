@@ -2,21 +2,21 @@
 
 {% block content %}
 
+<header class="masthead">
+    <div id='poll-details'>
+        <h1 class="text-white font-weight-bold">{{ question.question_text }}</h1>
 
-<div id='poll-details'>
-    <h1>{{ question.question_text }}</h1>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-
-    <form id='detail-form' action="{% url 'polls:vote' question.id %}" method="post">
-    {% csrf_token %}
-    {% for choice in question.choice_set.all %}
-        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-    {% endfor %}
-    <input class='site-button' id='poll-submit' type="submit" value="Vote">
-    </form>
-    
-</div>
-
+        <form id='detail-form' action="{% url 'polls:vote' question.id %}" method="post">
+        {% csrf_token %}
+        {% for choice in question.choice_set.all %}
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+        {% endfor %}
+        <input class='site-button' id='poll-submit' type="submit" value="Vote">
+        </form>
+        
+    </div>
+</header>
 {% endblock content %}
