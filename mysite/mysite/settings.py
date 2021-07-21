@@ -80,37 +80,37 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Uncomment for on heroku
 
-# DATABASE_URL = os.environ['DATABASE_URL']
+DATABASE_URL = os.environ['DATABASE_URL']
 
-# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-
-# DATABASES = {
-#     'default': {
-
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
-#         'NAME': 'test',
-
-#         'USER': 'postgres',
-
-#         'PASSWORD': 'postgres',
-
-#         'HOST': '127.0.0.1',
-
-#         'PORT': '5432',
-#     }
-# }
-
-# Comment out this DATABASES for heroku, reverse for local dev
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 DATABASES = {
     'default': {
 
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'test',
+
+        'USER': 'postgres',
+
+        'PASSWORD': 'postgres',
+
+        'HOST': '127.0.0.1',
+
+        'PORT': '5432',
     }
 }
+
+# Comment out this DATABASES for heroku, reverse for local dev
+
+# DATABASES = {
+#     'default': {
+
+#         'ENGINE': 'django.db.backends.sqlite3',
+
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -166,6 +166,6 @@ django_heroku.settings(locals())
 
 # Uncomment the below for heroku, comment out for local dev
 
-# db_from_env = dj_database_url.config()
-# DATABASES['default'].update(db_from_env)
-# DATABASES['default']['CONN_MAX_AGE'] = 500
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
