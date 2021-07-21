@@ -31,6 +31,9 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#portfolio">Portfolio</a></li>
+                        <li class="nav-item"></li><a class="nav-link" href="https://github.com/ETAnderson">GitHub</a></li>
+                        <li class="nav-item"></li><a class="nav-link" href="https://www.linkedin.com/in/eric-anderson-10862b20b/">LinkedIn</a></li>
+                        <li class="nav-item"></li><a class="nav-link" href="{%static 'files/Eric_Anderson_CV.pdf' %}" download>Resume</a></li>
                         <li class="nav-item"><a class="nav-link" href='mailto:anderson.eric.t@gmail.com'>Email</a></li>
                     </ul>
                 </div>
@@ -46,7 +49,7 @@
                         <hr class="divider" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">As a developer from a skilled trades background, I became used to eyes glazing over when asked about my career and decided there was a solution for this: rather then explaining components of software developement to people who wouldn't use the knowledge in any other aspect of their life, I would make my portfolio site a way for people to experience the knowledge and skills that I have gained in a way that those who aren't programatically adept will be able to engage with.</p>
+                        <p class="text-white-75 mb-5">As a developer from a skilled trades background, I became used to eyes glazing over when asked about my career and decided there was a solution for this: rather then explaining components of software development to people who wouldn't use the knowledge in any other aspect of their life, I would make my portfolio site a way for people to experience the knowledge and skills that I have gained in a way that those who aren't programatically adept will be able to engage with.</p>
                         <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
                     </div>
                 </div>
@@ -83,14 +86,14 @@
                         <div class="mt-5">
                             <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
                             <h3 class="h4 mb-2">Front End</h3>
-                            <p class="text-muted mb-0">HTML5, CSS3, Javascript, Bootstrap, React</p>
+                            <p class="text-muted mb-0"> React, HTML5, CSS3, Javascript, Bootstrap</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
                             <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
                             <h3 class="h4 mb-2">Deployment</h3>
-                            <p class="text-muted mb-0">Heroku or local</p>
+                            <p class="text-muted mb-0">Heroku</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
@@ -109,7 +112,7 @@
                 <div class="row g-0">
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="{% url 'blog:base' %}" title="Blog">
-                            <img class="img-fluid" src="{%static 'img/portfolio/thumbnails/1.jpg' %}" alt="..." />
+                            <img class="img-fluid" src="{%static 'img/portfolio/thumbnails/1.jpg' %}" alt="Blog" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Project</div>
                                 <div class="project-name">Blog</div>
@@ -117,8 +120,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="{% url 'polls:index' %}" title="Pollss">
-                            <img class="img-fluid" src="{%static 'img/portfolio/thumbnails/2.jpg' %}" alt="..." />
+                        <a class="portfolio-box" href="{% url 'polls:index' %}" title="Polls">
+                            <img class="img-fluid" src="{%static 'img/portfolio/thumbnails/2.jpg' %}" alt="Polls" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Project</div>
                                 <div class="project-name">Polls</div>
@@ -164,15 +167,6 @@
                 </div>
             </div>
         </div>
-        <!-- Call to action-->
-        <section class="page-section bg-dark text-white" id='web-links'>
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">Eric on the web!</h2>
-                <a class="nav-link" href="https://github.com/ETAnderson"><img src="{%static 'img/portfolio/64px/github.png' %}"></a>
-                <a class="nav-link" href="https://www.linkedin.com/in/eric-anderson-10862b20b/"><img src="{%static 'img/portfolio/64px/linkedin.png' %}"></a>
-                <a class="btn btn-light btn-xl" href="{%static 'files/Eric_Anderson_CV.pdf' %}" download>Resume</a>
-            </div>
-        </section>
     {% endblock content %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{%static 'js/scripts.js' %}"></script>
