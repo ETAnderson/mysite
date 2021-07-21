@@ -4,13 +4,13 @@
 {% block content %}
 <header class='masthead'>
 <div class="comments">
-  <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
-  <p>{{ post.author }} | {{ post.created_on }}</p>
-  <p>{{ post.content | safe }}</p>
+  <h1 text-white font-weight-bold>{% block title %} {{ post.title }} {% endblock title %}</h1>
+  <p class="text-white-75 mb-4">{{ post.author }} | {{ post.created_on }}</p>
+  <p class="text-white-75 mb-4">{{ post.content | safe }}</p>
 
   <div class="comment_block">
       <!-- comments -->
-      <h2>{{ comments.count }} comments</h2>
+      <h2 class='text-white mt-0'>{{ comments.count }} comments</h2>
 
       {% for comment in comments %}
       <div class="comments">
